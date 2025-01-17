@@ -30,6 +30,7 @@ public class Jugador extends Futbolista  {
 	@Override
 	 public int compareTo(Object otro) {
 		if(otro instanceof Futbolista) {
+			System.out.println(Integer.compare(this.getEdad(), ((Futbolista)otro).getEdad()));
 			return Integer.compare(this.getEdad(), ((Futbolista)otro).getEdad());
 		}
 		return 0;
