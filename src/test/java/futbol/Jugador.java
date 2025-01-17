@@ -16,6 +16,9 @@ public class Jugador extends Futbolista  {
 	public byte getDorsal() {
 		return this.dorsal;
 	}
+	public short getGolesMarcados() {
+		return this.getGolesMarcados();
+	}
 	@Override
 	public String toString() {
 		return "El futbolista " + this.getNombre() + " tiene " + this.getEdad() + ", y juega de "+ this.getPosicion() + " con el dorsal "+ this.getDorsal() +  ". Ha marcado " + this.golesMarcados;
@@ -30,7 +33,11 @@ public class Jugador extends Futbolista  {
 	@Override
 	 public int compareTo(Object otro) {
 		if(otro instanceof Jugador) {
-			return Integer.compare(this.getEdad(), ((Futbolista)otro).getEdad());
+			int diferencia = this.getGolesMarcados() - ((Jugador)otro).getGolesMarcados();
+			if( diferencia < 0) {
+				diferencia *= -1;				
+			}
+			return diferencia;
 		}
 		return 0;
     }
