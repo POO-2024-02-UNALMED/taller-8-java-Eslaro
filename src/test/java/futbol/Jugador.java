@@ -1,8 +1,8 @@
 package futbol;
 
 public class Jugador extends Futbolista  {
-	private short golesMarcados;
-	private byte dorsal;
+	public short golesMarcados;
+	public byte dorsal;
 	public Jugador(String nombre, int edad, String posicion, short golesMarcados, byte dorsal) {
 		super(nombre, edad, posicion);
 		this.golesMarcados = golesMarcados;
