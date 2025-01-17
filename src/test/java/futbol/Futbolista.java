@@ -1,6 +1,6 @@
 package futbol;
 import java.util.ArrayList;
-public abstract class Futbolista implements Comparable<Futbolista>{
+public abstract class Futbolista implements Comparable{
 	private String nombre;
 	private int edad;
 	private final String posicion;
@@ -42,7 +42,8 @@ public abstract class Futbolista implements Comparable<Futbolista>{
 	public String toString() {
 		return "El futbolista" + this.getNombre() + " tiene " + this.getEdad() + " y juega de "+ this.getPosicion();
 	}
-	public int compareTo(Futbolista o) {
+
+	public int compareTo(Object o) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

@@ -7,7 +7,7 @@ public class Portero extends Futbolista  {
 		super(nombre, edad, "Portero");
 		this.golesRecibidos = golesRecibidos;
 		this.dorsal = dorsal;
-	}
+	}	
 
 	public int getGolesRecibidos() {
 		return this.golesRecibidos;
@@ -19,7 +19,7 @@ public class Portero extends Futbolista  {
 	}
 
 	@Override
-	public int compareTo(Futbolista o) {
+	public int compareTo(Object o) {
 		if( o instanceof Portero) {
 			int diferencia = this.getGolesRecibidos() - ((Portero)o).getGolesRecibidos();
 			if( diferencia < 0) {
