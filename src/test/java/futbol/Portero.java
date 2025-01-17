@@ -12,7 +12,9 @@ public class Portero extends Futbolista  {
 	public int getGolesRecibidos() {
 		return this.golesRecibidos;
 	}
-
+	public byte getDorsal() {
+		return this.dorsal;
+	}
 	@Override
 	public boolean jugarConLasManos() {
 		return true;
@@ -31,7 +33,7 @@ public class Portero extends Futbolista  {
 		
 	}
 	public String toString() {
-		return "El futbolista " + this.getNombre() + " tiene " + this.getEdad() + ", y juega de "+ this.getPosicion()+ ". Le han marcado " + this.getGolesRecibidos();
+		return "El futbolista " + this.getNombre() + " tiene " + this.getEdad() + ", y juega de "+ this.getPosicion() + " con el dorsal "+ this.getDorsal() + ". Le han marcado " + this.getGolesRecibidos();
 	}
 
 }
