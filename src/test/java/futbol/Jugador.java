@@ -17,7 +17,7 @@ public class Jugador extends Futbolista  {
 		return this.dorsal;
 	}
 	public short getGolesMarcados() {
-		return this.getGolesMarcados();
+		return this.golesMarcados;
 	}
 	@Override
 	public String toString() {
