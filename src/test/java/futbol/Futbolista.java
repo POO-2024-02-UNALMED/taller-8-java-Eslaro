@@ -40,7 +40,7 @@ public abstract class Futbolista implements Comparable{
 		return this.posicion;
 	}
 	public String toString() {
-		return "El futbolista" + this.getNombre() + " tiene " + this.getEdad() + " y juega de "+ this.getPosicion();
+		return "El futbolista " + this.getNombre() + " tiene " + this.getEdad() + " y juega de "+ this.getPosicion();
 	}
 
 	public int compareTo(Object o) {

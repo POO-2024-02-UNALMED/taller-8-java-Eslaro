@@ -15,7 +15,7 @@ public class Jugador extends Futbolista  {
 	}
 	@Override
 	public String toString() {
-		return ((Futbolista) this).toString() + ". Ha marcado " + this.golesMarcados;
+		return "El futbolista " + this.getNombre() + " tiene " + this.getEdad() + " y juega de "+ this.getPosicion() + ". Ha marcado " + this.golesMarcados;
 	}
 
 	@Override
