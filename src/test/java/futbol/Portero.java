@@ -25,7 +25,7 @@ public class Portero extends Futbolista  {
 		if( o instanceof Portero) {
 			int diferencia = this.getGolesRecibidos() - ((Portero)o).getGolesRecibidos();
 			if( diferencia < 0) {
-				diferencia *= 1;				
+				diferencia *= -1;				
 			}
 			return diferencia;
 		}
