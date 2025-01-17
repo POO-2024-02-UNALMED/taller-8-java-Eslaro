@@ -1,0 +1,37 @@
+package futbol;
+
+public class Portero extends Futbolista  {
+	private short golesRecibidos;
+	private byte dorsal;
+	public Portero(String nombre, int edad, short golesRecibidos, byte dorsal) {
+		super(nombre, edad, "Portero");
+		this.golesRecibidos = golesRecibidos;
+		this.dorsal = dorsal;
+	}
+
+	public int getGolesRecibidos() {
+		return this.golesRecibidos;
+	}
+
+	@Override
+	public boolean jugarConLasManos() {
+		return true;
+	}
+
+	@Override
+	public int compareTo(Futbolista o) {
+		if( o instanceof Portero) {
+			int diferencia = this.getGolesRecibidos() - ((Portero)o).getGolesRecibidos();
+			if( diferencia < 0) {
+				diferencia *= 1;
+				return diferencia;
+			}
+		}
+		return 0;
+		
+	}
+	public String toString() {
+		return ((Portero) this).toString() + ". Ha marcado " + this.getGolesRecibidos();
+	}
+
+}
